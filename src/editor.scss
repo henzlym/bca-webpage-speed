@@ -4,6 +4,146 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-bca-page-speed-insights {
-	border: 1px dotted #f00;
+:root{
+    --font-size-large:32px;
+    --font-size-medium:20px;
+	--card-padding-x:15px;
+	--card-padding-y:15px;
+	--color-green-700: #080;
+	--color-green: #0c6;
+	--color-orange: #fa3;
+	--color-orange-700: #C33300;
+	--color-red: #f33;
+	--color-red-700: #c00;
+}
+#wpwrap{
+    background-color:#f5f6fa;
+}
+#wpcontent{
+    padding-right: 20px;
+}
+#bca-psi-admin-page{
+    font-family: 'Open Sans', sans-serif;
+    .bca-psi-admin-page-title{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+}
+#bca-psi-root{
+    margin-top: 35px;
+}
+.psi-category{
+    background-color:#fff;
+    box-shadow:0 0 7px 1px rgba(222, 226, 237, 0.5);
+    padding:25px var(--card-padding-x);
+    h1,h2,h3{
+        margin:0;
+    }
+    h2{
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .psi-category-description{
+        &:first-of-type{
+            margin-bottom: 0;
+        }
+        font-size: 16px;
+        margin: 10px 0 10px;
+    }
+}
+
+.psi-row{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-gap:15px 15px;
+    margin-top: 25px;
+}
+.psi-card{
+	background-color:#fff;
+}
+.psi-card{
+	padding:var(--card-padding-y) var(--card-padding-x);
+    box-shadow:0 0 5px 0px rgba(222, 226, 237, 0.5);
+}
+.psi-card-title{
+	font-size:16px;
+	text-transform:uppercase;
+}
+.psi-card-score{
+	font-size:24px;
+	font-weight:700;
+	margin-top:15px;
+}
+.psi-card-description{
+	color:#4c4c4c
+}
+.gauge-pass,
+.category-FAST{
+	color:var(--color-green)
+}
+.gauge-average,
+.category-AVERAGE{
+	color:var(--color-orange)
+}
+.gauge-fail,
+.category-SLOW{
+	color:var(--color-red)
+}
+
+/* PANELS */
+.psi-tab-panel{
+    margin-top: 25px;
+    button.components-button.components-panel__body-toggle {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        width: 100%;
+        max-width: 50%;
+        font-weight: 300;
+        font-size: 14px;
+        border: none;
+        color: #4c4c4c;
+        > span{
+            order: 3;
+            margin-left: auto;
+        }
+        .psi-audit-score{
+            margin-left: 5px;
+        }
+    }
+}
+
+/* TABS */
+.components-tab-panel__tabs{
+    position: relative;
+    &::after{
+        content:"";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #dee2ed;
+        z-index:0;
+    }
+}
+.components-tab-panel__tabs-item{
+    position: relative;
+    background-color: transparent;
+    font-size: 16px;
+    color: #8b93a6;
+    border: none;
+    padding: 0 0 15px;
+    margin: 0 35px 0 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 5;
+    &:first-child{
+        margin-left: 0;
+    }
+    &.active-tab{
+        color: #4c84ff;
+        border-bottom: 2px solid #4c84ff;
+    }
 }

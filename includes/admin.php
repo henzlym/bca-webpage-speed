@@ -29,6 +29,7 @@ if (!class_exists('__Prefix_Admin')) {
                 $asset = include_once BCA_PAGE_SPEED_INSIGHTS_PATH . '/build/index.asset.php';
                 // wp_enqueue_script( 'puppeteer', 'https://unpkg.com/puppeteer-web', [], $asset['version'], true );
                 wp_enqueue_script( 'page-speed-insights', BCA_PAGE_SPEED_INSIGHTS_URI . '/build/index.js', $asset['dependencies'], $asset['version'], true );
+                wp_enqueue_style( 'page-speed-insights', BCA_PAGE_SPEED_INSIGHTS_URI . '/build/index.css', [], $asset['version'] );
             }
         }
         public function set_pages()

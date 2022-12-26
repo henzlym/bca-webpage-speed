@@ -1,0 +1,12 @@
+Font:https://fonts.google.com/specimen/Cabin
+Dashboard Design Ref:https://www.behance.net/gallery/67773417/Developers-Panel-Dashboard
+Sites:
+https://www.dareboost.com/
+https://gtmetrix.com/
+https://www.webpagetest.org/
+https://pagespeed.web.dev/
+
+Steps -
+Create Initial screen while report is being created
+Create UI components for CWV scores
+Create UI components for CWV detailed scores
